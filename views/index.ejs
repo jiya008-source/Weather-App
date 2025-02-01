@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+    <h1>Weather App</h1>
+    <p>Your go-to place to check weather forecast.</p>
+    </header>
+    <main>
+    <% if(!weather) { %>
+        <form action="/weather" method="POST">
+            <label for="city">Enter a city</label>
+            <input type="text" name="city" id="city" required>
+            <button type="submit">Get Weather</button>
+        </form>
+    <% } else { %>
+        <h2>Weather in <%= weather.city %>, <%= weather.country %></h2>
+        <p><strong>Region: </strong> <%= weather.region %></p>
+        <p><strong>Local Time:</strong> <%= weather.localtime %></p>
+        <p><strong>Temperature:</strong> <%= weather.temperature %>°C</p>
+        <p><strong>Description:</strong> <%= weather.description %></p>
+        <p><strong>Feels Like:</strong> <%= weather.feelslike %>°C</p>
+        <p><strong>Humidity:</strong> <%= weather.humidity %>%</p>
+        <p><strong>Cloud Cover:</strong> <%= weather.cloudcover %>%</p>
+        <p><strong>Wind:</strong> <%= weather.wind_speed %> km/h (<%= weather.wind_dir %>)</p>
+        <p><strong>Visibility:</strong> <%= weather.visibility %> km</p>
+        <img src="<%= weather.icon %>" alt="Weather Icon">
+        <a href="/">Search another city</a>
+    <% } %>
+</main>
+<footer>
+    <p>© 2025 Weather App | Built with ❤️ using Express, EJS, and Axios</p>
+    <p><a href="https://weatherstack.com/documentation" target="_blank">Powered by OpenWeatherMap API</a></p>
+</footer>
+
+</body>
+</html>

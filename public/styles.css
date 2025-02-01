@@ -1,0 +1,98 @@
+/* General Styles */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px; /* Increased base font size */
+}
+
+/* Header */
+header {
+    background-color: #4682B4;
+    color: #ffffff;
+    padding: 30px; /* Increased padding for larger header */
+    text-align: center;
+    font-size: 2.5rem; /* Significantly increased font size for header */
+    font-weight: bold;
+}
+
+/* Main Section */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Weather Result */
+.weather-result {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 3rem; /* Larger font size for result content */
+}
+
+/* Form */
+form {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem; /* Increased form font size */
+}
+
+/* Footer */
+footer {
+    font-size: 1.5rem; /* Increased footer font size */
+    background-color: #4682B4;
+    color: #ffffff;
+    padding: 20px; /* Increased padding for larger footer */
+    text-align: center;
+}
+
+/* Buttons and Inputs */
+input, button {
+    padding: 12px; /* Slightly larger input and button padding */
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Larger button and input text */
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem; /* Increased font size for links */
+}
+
+a:hover {
+    text-decoration: underline;
+}
